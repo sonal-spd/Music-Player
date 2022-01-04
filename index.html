@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" class="stylesheet">
+</head>
+<body>
+    <div class = "main">
+        <div class = "music_container">
+            <h2 id="title">Song Name</h2>
+            <h3 id="artist">Artist</h3>
+            <div class = "img_container">
+                <img src = "images/1.jpg" alt ="">
+
+            </div>
+            <audio src = "music/1.mp3"></audio>
+            <div class="controls">
+                <i class="material-icons" id="prev" title="Previous">fast_rewind</i>
+                <i class="material-icons" id="play" title="Play">play_arrow</i>
+                <i class="material-icons" id="next" title="Next">fast_forward</i>
+            </div>
+        </div>
+    </div>
+    <script>
+        const music = document.querySelector("audio");
+        const play = document.getElementById("play");
+        play.addEventListener('click',() =>{
+            if(music.paused){
+            music.play();
+            play.innerHTML="pause";
+            }
+            else{
+                music.pause();
+                play.innerHTML="play_arrow";
+            }
+    });
+
+    </script>
+</body>
+</html>
