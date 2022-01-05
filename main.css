@@ -9,22 +9,29 @@
 html{
     font-family: Helvetica;
     font-size: 70%;
+    background-image:linear-gradient(to bottom right,pink,purple,dodgerblue,slateblue,blue);
+    
 }
 .main{
     width: 100vw;
     height: 100vh;
-    background-color:hsla(0.5, 20%, 40%, 0.4);
     display: grid;
+    justify-content: center;
     place-items: center;
 }
-.music_container {
+
+
+
+
+.music_container { 
     width: 35rem;
     height: 55rem;
     background-color: beige;
-    border-radius: 2rem;
+    border-radius: 3rem;
     box-shadow: 0 1.2rem 3rem 0.5 rem rgba(0, 0, 0, 0.2);
     padding: 3rem;
     text-align: center;
+    
 }
 
 .music_container #title {
@@ -62,12 +69,59 @@ img {
     box-decoration-break: slice;
 
 }
+.progressbar {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+}
+
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    cursor:pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.progress{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0%;
+    background-color:blue;
+    height: 100%;
+    border-radius: 4rem;
+    transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    -webkit-transition: width 1s linear;
+    cursor:pointer;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+.progress-duration{
+    display: flex;
+    justify-content: space-between;
+    font-size:1.5rem;
+}
 .controls {
     width:20rem;
     display:flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
     align-items: center;
 }
 .material-icons {
